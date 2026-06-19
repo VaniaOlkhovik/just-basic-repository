@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Головна{% endblock %}
+
+{% block content %}
+    <h1>Тут щось є...</h1>
+    
+    <button id="btn-1" onclick="showNext(1, 2)">Кнопка</button>
+
+    <button id="btn-2" style="display: none;" onclick="showNext(2, 3)">Ще одна кнопка😱</button>
+    <button id="btn-3" style="display: none;" onclick="showNext(3, 4)">Ну тут нічого нема</button>
+    <button id="btn-4" style="display: none;" onclick="showNext(4, 5)">Та сказав же що нема, хватить тикать!</button>
+    <div id="btn-5" style="display: none;">
+        <h1>Аааа.. файно тримай свої подарунки та їди звідси:</h1>
+        <a href="https://drive.google.com/file/d/1RAmczOdGk5u1Gd56oS2LvCMtkoBa_Orn/view?usp=drivesdk">
+         <h1>Натисни на мене! (від Данила)</h1>
+        </a>   
+        <h1>але це ще не кінець! Піди в машину та загляни в кишеню правого сидіння (від Івана) </h1>
+    </div>
+    <script>
+    function showNext(currentId, nextId) {
+        document.getElementById('btn-' + currentId).style.display = 'none';
+        document.getElementById('btn-' + nextId).style.display = 'inline-block';
+    }
+    </script>
+{% endblock %}
